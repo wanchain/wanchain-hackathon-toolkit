@@ -95,7 +95,7 @@ div#__blaze-root {
     /*background: url(/headerbg.jpg) !important;*/
     background-size: cover !important;
     background-attachment: fixed !important;
-    padding-bottom:30px;
+    padding-bottom: 30px;
 }
 
 .skiptranslate.goog-te-gadget {
@@ -159,76 +159,132 @@ img {
 }
 
 .position-relative.overflow-hidden.p-3.p-md-5.m-md-3.text-center.bg-light {
-    background: url(/headerbg.jpg)!important;
+    background: url(/headerbg.jpg) !important;
     color: white;
     margin: 0px !important;
-    background-size: 100%!important;
-}.skiptranslate.goog-te-gadget {
-     position: fixed;
-     bottom: 0px;
-     width: 100%;
-     background: #071838f5;
-    z-index: 333;
-     padding: 4px;
- }pre code {
-      font-size: inherit;
-      color: inherit;
-      word-break: break-word;
+    background-size: 100% !important;
+}
 
-  }.skiptranslate.goog-te-gadget {
-       position: fixed;
-       bottom: 0px;
-       width: 100%;
-       background: #f2f2f2f5;
-       z-index: 333;
-       padding: 4px;
-   }.site-header {
-        background-color: rgb(7, 23, 56)!important;
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        backdrop-filter: saturate(180%) blur(20px);
-        color: white !important;
-    }
+.skiptranslate.goog-te-gadget {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: #071838f5;
+    z-index: 333;
+    padding: 4px;
+}
+
+pre code {
+    font-size: inherit;
+    color: inherit;
+    word-break: break-word;
+
+}
+
+.skiptranslate.goog-te-gadget {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: #f2f2f2f5;
+    z-index: 333;
+    padding: 4px;
+}
+
+.site-header {
+    background-color: rgb(7, 23, 56) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    color: white !important;
+}
+
 h3 {
     background: #FFEB3B;
     padding: 10px;
     font-size: 27px;
     margin-bottom: 16px;
-}h3 {
-     background: #082d6a;
-     padding: 10px;
-     font-size: 18px;
-     margin-bottom: 16px;
-     color: white;
-     text-transform: uppercase;
- }
+}
+
+h3 {
+    background: #082d6a;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: white;
+    text-transform: uppercase;
+}
+
 .markdown h1 {
     border-bottom: solid 1px grey;
     padding-bottom: 16px;
-}.markdown h2 {
-     margin-bottom: 17px;
-     margin-top: 15px;
-     font-size: 34px;
- }
- .list-group-item {
-      font-size: 13px;
-  }.markdown h2 {
-       margin-bottom: 17px;
-       margin-top: 15px;
-       font-size: 26px;
-   }.markdown h4 {
-        font-size: 18px;
-        text-transform: uppercase;
-    color:#333;
-    }.markdown h2 {
-         margin-bottom: 17px;
-         margin-top: 15px;
-         font-size: 26px;
-         font-weight: bold;
-         color: black;
-     }.markdown h5 {
-          font-size: 15px;
-          font-style: italic;
-      }.nav-link.pull-right {
-           position: absolute;
-           right: 17px;
-       }
+}
+
+.markdown h2 {
+    margin-bottom: 17px;
+    margin-top: 15px;
+    font-size: 34px;
+}
+
+.list-group-item {
+    font-size: 13px;
+}
+
+.markdown h2 {
+    margin-bottom: 17px;
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+.markdown h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.markdown h2 {
+    margin-bottom: 17px;
+    margin-top: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+.markdown h5 {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.nav-link.pull-right {
+    position: absolute;
+    right: 17px;
+}
+
+.btn.btn-xs.connect {
+    display: block;
+    float: right;
+    position: relative;
+    top: -7px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn.btn-xs.edit {
+    display: block;
+    float: right;
+    position: relative;
+    top: -7px;
+
+}.btn.btn-xs.edit {
+     display: block;
+     float: right;
+     position: relative;
+     top: -7px;
+     margin-left: 8px;
+ }.rpc {
+      background: black;
+      position: relative;
+      top: 16px;
+      text-align: center;
+      display: block;
+  }p.lead.strong {
+       font-weight: bold;
+   }

@@ -1,49 +1,66 @@
 Template.navBar.helpers({
-    'connected':function(){
+    'connected': function () {
         return Session.get('connected');
     },
-    'attempted':function(){
+    'attempted': function () {
         return Session.get('attempted');
+    },
+    'rpc': function () {
+        return Session.get('rpc');
     }
 });
 
 Template.navBar.events({
-    'click .connect':function(){
+    'click .connect': function (event, template) {
+        event.preventDefault();
         var Web3 = require('web3');
-        web3 = new Web3(new Web3.providers.HttpProvider("http://159.89.159.139:8549")); // change this to your local rpc
-
-
-        web3.eth.getCoinbase(function(err,resp){
-            if(resp){
-                console.log('connected to wanchain node')
-                console.log('coinbase',resp);
+        web3 = new Web3(new Web3.providers.HttpProvider(Session.get('rpc'))); // change this to your local rpc
+        Session.set('attempted', false);
+        web3.eth.getCoinbase().then(function (resp) {
+            console.log('coinbase', resp);
+            Session.set('coinbase',resp);
+            if (web3.eth._provider.connected) {
+                Session.set('connected', true);
+            } else {
+                Session.set('connected', false);
             }
+            Session.set('attempted', true);
+        }).catch(function(){
+            Session.set('attempted', true);
+            Session.set('connected', false);
         });
-        Session.set('attempted',false);
-        setTimeout(function(){
-            Session.set('attempted',true);
-            if(web3.currentProvider.connected){
-                Session.set('connected',true);
-            }else{
-                Session.set('connected',false);
+    },
+    'click .edit': function (event, template) {
+        event.preventDefault();
+
+        var rpcAddr = prompt('Enter RPC Address (http://localhost:8545)', 'http://localhost:8545');
+        Session.set('rpc', rpcAddr);
+        var Web3 = require('web3');
+        web3 = new Web3(new Web3.providers.HttpProvider(Session.get('rpc'))); // change this to your local rpc
+        Session.set('attempted', false);
+
+        web3.eth.getCoinbase().then(function (resp) {
+            console.log('coinbase', resp);
+            Session.set('coinbase',resp);
+            if (web3.eth._provider.connected) {
+                Session.set('connected', true);
+            } else {
+                Session.set('connected', false);
             }
-        },3000)
+            Session.set('attempted', true);
+        }).catch(function(){
+            Session.set('attempted', true);
+            Session.set('connected', false);
+        });
     }
 });
 
 Template.navBar.onCreated(function () {
-    //add your statement here
+
 });
 
 Template.navBar.onRendered(function () {
-    setTimeout(function(){
-        Session.set('attempted',true);
-        if(web3.currentProvider.connected){
-            Session.set('connected',true);
-        }else{
-            Session.set('connected',false);
-        }
-    },3000)
+
 });
 
 Template.navBar.onDestroyed(function () {

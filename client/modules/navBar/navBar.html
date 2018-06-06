@@ -10,18 +10,27 @@
             <div class="navbar-nav">
                 <!--<a class="nav-link" href="/">Hackathon</a>-->
                 <a class="nav-link" href="/">Docs</a>
-                <a class="nav-link" href="/examples">Examples</a>
-                <div class="nav-link pull-right connect">
+                <a class="nav-link" href="/x/examples">Examples</a>
+                <div class="nav-link pull-right ">
+                    {{#if rpc}}
+
+
                     {{#if attempted}}
                         {{#if connected}}
-                            <i class="fa fa-circle text-success"></i> Web3 Connected
+                            RPC: <i class="fa fa-circle text-success"></i> {{rpc}}
                         {{else}}
-                            <i class="fa fa-circle text-danger"></i> Web3 Not Connected
+                            RPC: <i class="fa fa-circle text-danger"></i> {{rpc}}
                         {{/if}}
                     {{else}}
-                            <i class="fa fa-spin fa-spinner"></i> connecting to web3
+                        <i class="fa fa-spin fa-spinner"></i> connecting to RPC
                     {{/if}}
-                    <div class="btn btn-xs connect btn-default"><i class="fa fa-refresh"></i></div>
+
+                    {{else}}
+                        no rpc url
+                    {{/if}}
+                    <div class="btn btn-xs connect btn-dark"><i class="fa fa-refresh"></i></div>
+                    <div class="btn btn-xs edit btn-dark"><i class="fa fa-edit"></i> Edit RPC</div>
+
                 </div>
             </div>
 
