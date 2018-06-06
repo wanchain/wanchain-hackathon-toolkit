@@ -1,0 +1,234 @@
+.container {
+    max-width: 1560px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #999;
+    transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+
+.product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+}
+
+/*
+ * Extra utilities
+ */
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.flex-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-md-equal > * {
+        -ms-flex: 1;
+        -webkit-box-flex: 1;
+        flex: 1;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+div#__blaze-root {
+    /*background: url(/headerbg.jpg) !important;*/
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    padding-bottom:30px;
+}
+
+.skiptranslate.goog-te-gadget {
+    padding-bottom: 10px;
+}
+
+h1.display-4.font-weight-normal {
+    line-height: 1;
+    font-weight: bold !important;
+}
+
+.site-header {
+    background-color: rgb(7, 23, 56);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    color: white !important;
+
+}
+
+.position-relative.overflow-hidden.p-3.p-md-5.m-md-3.text-center.bg-light {
+    background: #050e1e !important;
+    color: white;
+    margin: 0px !important;
+}
+
+h1.display-4.font-weight-normal {
+    line-height: 1;
+    font-weight: bold !important;
+    font-size: 2.5em;
+}
+
+.skiptranslate.goog-te-gadget {
+    text-align: center;
+    padding: 13px;
+    background: white;
+}
+
+.container.bg-white {
+    padding: 26px;
+    min-height: 60vh;
+}
+
+pre {
+    padding: 10px;
+    background: black;
+    color: #8cccff;
+}
+
+pre {
+    padding: 10px;
+    background: black;
+    color: white;
+}
+
+h4, h1 {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+.position-relative.overflow-hidden.p-3.p-md-5.m-md-3.text-center.bg-light {
+    background: url(/headerbg.jpg)!important;
+    color: white;
+    margin: 0px !important;
+    background-size: 100%!important;
+}.skiptranslate.goog-te-gadget {
+     position: fixed;
+     bottom: 0px;
+     width: 100%;
+     background: #071838f5;
+    z-index: 333;
+     padding: 4px;
+ }pre code {
+      font-size: inherit;
+      color: inherit;
+      word-break: break-word;
+
+  }.skiptranslate.goog-te-gadget {
+       position: fixed;
+       bottom: 0px;
+       width: 100%;
+       background: #f2f2f2f5;
+       z-index: 333;
+       padding: 4px;
+   }.site-header {
+        background-color: rgb(7, 23, 56)!important;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        color: white !important;
+    }
+h3 {
+    background: #FFEB3B;
+    padding: 10px;
+    font-size: 27px;
+    margin-bottom: 16px;
+}h3 {
+     background: #082d6a;
+     padding: 10px;
+     font-size: 18px;
+     margin-bottom: 16px;
+     color: white;
+     text-transform: uppercase;
+ }
+.markdown h1 {
+    border-bottom: solid 1px grey;
+    padding-bottom: 16px;
+}.markdown h2 {
+     margin-bottom: 17px;
+     margin-top: 15px;
+     font-size: 34px;
+ }
+ .list-group-item {
+      font-size: 13px;
+  }.markdown h2 {
+       margin-bottom: 17px;
+       margin-top: 15px;
+       font-size: 26px;
+   }.markdown h4 {
+        font-size: 18px;
+        text-transform: uppercase;
+    color:#333;
+    }.markdown h2 {
+         margin-bottom: 17px;
+         margin-top: 15px;
+         font-size: 26px;
+         font-weight: bold;
+         color: black;
+     }.markdown h5 {
+          font-size: 15px;
+          font-style: italic;
+      }.nav-link.pull-right {
+           position: absolute;
+           right: 17px;
+       }

@@ -1,0 +1,30 @@
+<template name="navBar">
+
+    <nav class="navbar site-header navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="/"><img src="/wanchain.png" style="width:80px;" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!--<a class="nav-link" href="/">Hackathon</a>-->
+                <a class="nav-link" href="/">Docs</a>
+                <a class="nav-link" href="/examples">Examples</a>
+                <div class="nav-link pull-right connect">
+                    {{#if attempted}}
+                        {{#if connected}}
+                            <i class="fa fa-circle text-success"></i> Web3 Connected
+                        {{else}}
+                            <i class="fa fa-circle text-danger"></i> Web3 Not Connected
+                        {{/if}}
+                    {{else}}
+                            <i class="fa fa-spin fa-spinner"></i> connecting to web3
+                    {{/if}}
+                    <div class="btn btn-xs connect btn-default"><i class="fa fa-refresh"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</template>
