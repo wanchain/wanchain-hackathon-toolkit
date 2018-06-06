@@ -1,6 +1,8 @@
 
 
-# WANCHAIN Hackathon Toolkit
+<img src="https://cl.ly/s8P1/Wanchain.png">
+
+# Hackathon Toolkit
 
 
 ### How to Run
