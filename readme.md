@@ -19,6 +19,6 @@ https://www.meteor.com/install
 
 `meteor npm install --save` // install npm dependencies
 
-`meteor --settings settings.json --port 9000`
+`meteor --port 9000`
 
 <a href="http://localhost:9000">Open locahost:9000</a>
