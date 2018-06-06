@@ -9,16 +9,18 @@ Template.examples.helpers({
 
 Template.examples.events({
    'click .coinbase .execute':function(){
-       web3.eth.getCoinbase(function(err,resp){
-           console.log(err,resp);
-         alert('coinbase: '+ resp);
-       })
+       web3.eth.getCoinbase().then(function(resp){
+           alert('coinbase: ' + resp)
+       }).catch(function(err){
+           alert('error',err)
+       });
    },
     'click .blocknumber .execute':function(){
-        web3.eth.getBlockNumber(function(err,resp){
-            console.log(err,resp);
-            alert('current block: '+ resp);
-        })
+        web3.eth.getBlockNumber().then(function(resp){
+            alert('latest block: ' + resp)
+        }).catch(function(err){
+            alert('error',err)
+        });
     },
     'submit .getBalance':function(event,template){
         event.preventDefault();

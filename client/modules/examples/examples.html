@@ -1,63 +1,68 @@
 <template name="examples">
 <div class="container">
-    <hr>
+<hr>
 {{#if connected}}
 <h4>Get Coinbase</h4>
 <div class="markdown coinbase">
 {{#markdown}}
 ````
-web3.eth.getCoinbase(function(err,resp){
-console.log(err,resp);
-Session.set('coinbase',resp);
-})
+web3.eth.getCoinbase().then(function(resp){
+alert('coinbase: ' + resp)
+}).catch(function(err){
+alert('error',err)
+});
 ````
 {{/markdown}}
-    <div class="btn btn-primary execute">Execute</div>
+<div class="btn btn-primary execute">Execute</div>
 </div>
 
-    <hr>
+<hr>
 
 <h4>Get Block Number</h4>
 <div class="markdown blocknumber">
 {{#markdown}}
 ````
-web3.eth.getBlockNumber(function(err,resp){
-console.log(resp)
-})
+web3.eth.getBlockNumber().then(function(resp){
+alert('latest block: ' + resp)
+}).catch(function(err){
+alert('error',err)
+});
 ````
 {{/markdown}}
-    <div class="btn btn-primary execute">Execute</div>
+<div class="btn btn-primary execute">Execute</div>
 </div>
 
 
-    <hr>
+<hr>
 <h4>Get Balance</h4>
-    <form class="getBalance">
-        <div class="form-group">
-            <label for="">Address</label>
-            <input type="text" value="{{coinbase}}" class="form-control">
-        </div>
-        <div class="form-group">
-            <button class="btn-primary btn" type="submit">Execute</button>
-        </div>
-    </form>
+<form class="getBalance">
+<div class="form-group">
+<label for="">Address</label>
+<input type="text" value="{{coinbase}}" class="form-control">
+</div>
+<div class="form-group">
+<button class="btn-primary btn" type="submit">Execute</button>
+</div>
+</form>
 
 <div class="markdown balance">
 {{#markdown}}
 ````
 var address = Session.get('coinbase').toUpperCase();
-web3.eth.getBalance(address,function(err,resp){
-console.log(resp)
-})
+web3.eth.getBalance(address).then(function(resp){
+alert('balance for '+address + ' = '+resp)
+}).catch(function(err){
+alert('error',err); // handle errors
+});
 ````
 {{/markdown}}
 
 </div>
-    {{else}}
-    <div class="alert alert-danger">
-        <p class="lead strong"><i class="fa fa-warning"></i> RPC Not Connected</p>
-        <p>Add/Edit your RPC url and try again</p>
-    </div>
+{{else}}
+<div class="alert alert-danger">
+<p class="lead strong"><i class="fa fa-warning"></i> RPC Not Connected</p>
+<p>Add/Edit your RPC url and try again</p>
+</div>
 {{/if}}
 </div>
 

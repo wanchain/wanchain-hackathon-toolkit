@@ -60,7 +60,22 @@ Template.navBar.onCreated(function () {
 });
 
 Template.navBar.onRendered(function () {
-
+    var Web3 = require('web3');
+    web3 = new Web3(new Web3.providers.HttpProvider(Session.get('rpc'))); // change this to your local rpc
+    Session.set('attempted', false);
+    web3.eth.getCoinbase().then(function (resp) {
+        console.log('coinbase', resp);
+        Session.set('coinbase',resp);
+        if (web3.eth._provider.connected) {
+            Session.set('connected', true);
+        } else {
+            Session.set('connected', false);
+        }
+        Session.set('attempted', true);
+    }).catch(function(){
+        Session.set('attempted', true);
+        Session.set('connected', false);
+    });
 });
 
 Template.navBar.onDestroyed(function () {
