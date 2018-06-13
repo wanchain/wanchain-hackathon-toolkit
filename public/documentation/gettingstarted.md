@@ -57,13 +57,13 @@ $ source ~/.bash_profile
 ##### example 1 - testnet
 
 ```
-$ gwan --testnet --rpc --port 8545 --rpccorsdomain "127.0.0.1" --rpcaddr "127.0.0.1"   --verbosity=0 console
+$ gwan --testnet --rpcport 8545 --rpccorsdomain "127.0.0.1" --rpcaddr "127.0.0.1"  --verbosity=0 console
 ```
 
 
 ##### example 2 - mainnet
 ```
-$ gwan --rpc --rpccorsdomain "http://localhost:<YOUR DAPP PORT>" --verbosity=0 console
+$ gwan --rpcport 8545 --rpccorsdomain "127.0.0.1" --rpcaddr "127.0.0.1"   --verbosity=0 console
 ```
 
 
