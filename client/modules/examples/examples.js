@@ -5,6 +5,9 @@ Template.examples.helpers({
     'connected':function(){
         return Session.get('connected');
     },
+    'rpc':function(){
+        return Session.get('rpc');
+    },
 });
 
 Template.examples.events({

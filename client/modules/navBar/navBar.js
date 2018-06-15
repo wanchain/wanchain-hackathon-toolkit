@@ -33,7 +33,7 @@ Template.navBar.events({
     'click .edit': function (event, template) {
         event.preventDefault();
 
-        var rpcAddr = prompt('Enter RPC Address (http://localhost:8545)', 'http://localhost:8545');
+        var rpcAddr = prompt('Enter RPC Address (http://localhost:8545)', 'http://52.14.147.127/testnet');
         Session.set('rpc', rpcAddr);
         var Web3 = require('web3');
         web3 = new Web3(new Web3.providers.HttpProvider(Session.get('rpc'))); // change this to your local rpc

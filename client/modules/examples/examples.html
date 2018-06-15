@@ -1,9 +1,26 @@
 <template name="examples">
-<div class="container">
-<hr>
+<div class="container markdown-body" style="margin-top:20px;">
+
 {{#if connected}}
-<h4>Get Coinbase</h4>
-<div class="markdown coinbase">
+    <div class="jumbotron">
+<h3>Connect Web3</h3>
+
+<div class="markdown">
+
+{{#markdown}}
+````
+var Web3 = require('web3');
+web3 = new Web3(new Web3.providers.HttpProvider('{{rpc}}'));
+````
+{{/markdown}}
+
+</div>
+    </div>
+
+<div class="jumbotron">
+    <h3>Get Coinbase Address</h3>
+    <p>The coinbase address is the primary address of the running gwan node.</p>
+    <div class="markdown coinbase">
 {{#markdown}}
 ````
 web3.eth.getCoinbase().then(function(resp){
@@ -14,11 +31,12 @@ alert('error',err)
 ````
 {{/markdown}}
 <div class="btn btn-primary execute">Execute</div>
+    </div>
 </div>
 
-<hr>
 
-<h4>Get Block Number</h4>
+<div class="jumbotron">
+<h3>Get Block Number</h3>
 <div class="markdown blocknumber">
 {{#markdown}}
 ````
@@ -31,10 +49,12 @@ alert('error',err)
 {{/markdown}}
 <div class="btn btn-primary execute">Execute</div>
 </div>
+</div>
 
 
-<hr>
-<h4>Get Balance</h4>
+
+<div class="jumbotron">
+<h3>Get Balance</h3>
 <form class="getBalance">
 <div class="form-group">
 <label for="">Address</label>
@@ -58,6 +78,25 @@ alert('error',err); // handle errors
 {{/markdown}}
 
 </div>
+</div>
+
+<div class="jumbotron">
+<h3>Send Private Transaction</h3>
+<div class="markdown blocknumber">
+    {{#markdown}}
+        ````
+        web3.eth.getBlockNumber().then(function(resp){
+        alert('latest block: ' + resp)
+        }).catch(function(err){
+        alert('error',err)
+        });
+        ````
+    {{/markdown}}
+    <div class="btn btn-primary execute">Execute</div>
+</div>
+</div>
+
+
 {{else}}
 <div class="alert alert-danger">
 <p class="lead strong"><i class="fa fa-warning"></i> RPC Not Connected</p>

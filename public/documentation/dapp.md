@@ -15,7 +15,7 @@ Once you have your node running, you must keep that terminal window open or else
 There are methods to keep it running in the background, but for this example lets just keep that terminal window open.
 
 ```
-$ gwan --testnet --rpc --port 8545 --rpccorsdomain 127.0.0.1  --verbosity=0 console
+$ gwan --testnet --rpc --rpcport 8545 --rpccorsdomain 127.0.0.1  --verbosity=0 console
 
 ```
 
@@ -33,7 +33,7 @@ Inside of your wanchain node terminal window type the following:
 ##### then restart your node
 ```
 > exit
-$ gwan --testnet --rpc --port 8545 --rpccorsdomain "127.0.0.1" --rpcaddr "127.0.0.1"   --verbosity=0 console
+$ gwan --testnet --rpc --rpcport 8545 --rpccorsdomain "127.0.0.1" --rpcaddr "127.0.0.1"   --verbosity=0 console
 
 ```
 
@@ -102,7 +102,7 @@ Once you have your node running, you must keep that terminal window open or else
 There are methods to keep it running in the background, but for this example lets just keep that terminal window open.
 
 ```
-$ gwan --testnet --rpc --port 8545 --rpccorsdomain 127.0.0.1  --verbosity=0 console
+$ gwan --testnet --rpc --rpcport 8545 --rpccorsdomain 127.0.0.1  --verbosity=0 console
 
 ```
 
@@ -120,7 +120,7 @@ Inside of your wanchain node terminal window type the following:
 ##### then restart your node
 ```
 > exit
-$ gwan --testnet --rpc --port 8545 --rpccorsdomain "127.0.0.1" --rpcaddr "127.0.0.1"   --verbosity=0 console
+$ gwan --testnet --rpc --rpcport 8545 --rpccorsdomain "127.0.0.1" --rpcaddr "127.0.0.1"   --verbosity=0 console
 
 ```
 
@@ -159,14 +159,14 @@ web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545));
 In order to connect to your blockchain via RPC you must make sure your node is running and that you used  `--rpc` flag
 when starting up your node. We are assuming you are using `localhost` to run your dapp so you also want to make sure 
 have the following included in your node startup command `--rpccorsdomain 127.0.0.1 `
-```
+~~~javascript
 var Web3 = require('web3');
 web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
 web3.eth.getCoinbase(function(err,resp){
     console.log('coinbase',resp)
 });
+~~~
 
-```
 If you ran this on the client, you should see the coinbase logged in your javascript console.
 
 If you ran this on the server, you should see the coinbase logged in your server logs.
