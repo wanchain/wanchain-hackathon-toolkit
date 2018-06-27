@@ -85,7 +85,14 @@ alert('error',err); // handle errors
 <div class="markdown blocknumber">
     {{#markdown}}
 ````
-coming soon
+Example of Oridinary address :
+0xefe000C1b9f9ca9bf063857aAF5fCb7B8A25eaA1
+
+Example of Private address :
+0x02bddd6c139a10c5c9e81d1d6438dd26bc4a26824a2c729819d21ee1fca8b2dbc203936c798596ac4adcbe89e96c88397894b6dfab14a95ea7e137c31f56b9c81255
+
+sendTx = personal.sendPrivacyCxtTransaction({from:addrTokenHolder, to:contractAddr, value:0, data: combinedData, gasprice:'0x' + (200000000000).toString(16)}, privateKeyTokenHolder)
+wait(function(){return eth.getTransaction(sendTx).blockNumber != null;});
 ````
     {{/markdown}}
     <!--<div class="btn btn-primary execute">Execute</div>-->
@@ -93,17 +100,17 @@ coming soon
 </div>
 
 
-<div class="jumbotron">
-<h3>Send Public Transaction</h3>
-<div class="markdown blocknumber">
-{{#markdown}}
-````
-coming soon
-````
-{{/markdown}}
-<!--<div class="btn btn-primary execute">Execute</div>-->
-</div>
-</div>
+<!--<div class="jumbotron">-->
+<!--<h3>Send Public Transaction</h3>-->
+<!--<div class="markdown blocknumber">-->
+<!--{{#markdown}}-->
+<!--````-->
+<!--coming soon-->
+<!--````-->
+<!--{{/markdown}}-->
+<!--&lt;!&ndash;<div class="btn btn-primary execute">Execute</div>&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
 
 
 {{else}}
